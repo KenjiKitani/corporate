@@ -9,23 +9,26 @@
 </head>
 <body>
   <header class="header">
-    <h1 class="header-logo">
-      <a href="/">logo</a>
-    </h1>
-
-      <nav class="global-menu">
-        <ul class="menu">
-          <li class="menu-item">
-            <a href="#!">私たちについて</a>
-          </li>
-          <li class="menu-item">
-            <a href="#!">お知らせ</a>
-          </li>
-          <li class="menu-item">
-            <a href="#!">お問い合わせ</a>
-          </li>
-        </ul>
-      </nav>
+    <div class="header-container">
+      <h1 class="header-logo">
+        <a href="/">
+          <img src="http://placehold.jp/160x48.png" alt="ロゴ">
+        </a>
+      </h1>
+        <nav class="global-menu">
+          <ul class="menu">
+            <li class="menu-item">
+              <a href="#!">私たちについて</a>
+            </li>
+            <li class="menu-item">
+              <a href="#!">お知らせ</a>
+            </li>
+            <li class="menu-item">
+              <a href="#!">お問い合わせ</a>
+            </li>
+          </ul>
+        </nav>
+    </div>
 
   </header>
 
