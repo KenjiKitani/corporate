@@ -15,22 +15,32 @@
           <img src="http://placehold.jp/160x48.png" alt="ロゴ">
         </a>
       </h1>
-        <nav class="global-menu">
-          <ul class="menu">
-            <li class="menu-item">
-              <a href="#!">私たちについて</a>
-            </li>
-            <li class="menu-item">
-              <a href="#!">お知らせ</a>
-            </li>
-            <li class="menu-item">
-              <a href="#!">お問い合わせ</a>
-            </li>
-          </ul>
-        </nav>
+      <nav class="global-menu">
+        <ul class="menu">
+          <li class="menu-item">
+            <a href="#!">私たちについて</a>
+          </li>
+          <li class="menu-item">
+            <a href="#!">お知らせ</a>
+          </li>
+          <li class="menu-item">
+            <a href="#!">お問い合わせ</a>
+          </li>
+        </ul>
+      </nav>
     </div>
-
   </header>
+
+<main class="main">
+  <div class="main-visual">
+    <picture>
+      <source srcset="http://placehold.jp/375x500.png" media="(max-width:767px)">
+      <img src="http://placehold.jp/1440x436.png" alt="">
+    </picture>
+    <p>キャッチコピー</p>
+  </div>
+</main>
+
 
   <?php wp_footer(); ?>
 </body>
