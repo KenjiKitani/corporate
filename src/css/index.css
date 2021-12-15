@@ -72,7 +72,7 @@
 
 .feature-item-inner {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column-reverse; /* 位置の逆転 */
 }
 
 .feature-item-title {
@@ -90,3 +90,5 @@
   width: 100%;
   max-width: inherit; /* inheritは他のcssのmax-widthを打ち消す */
 }
+
+/* ビジネスセクション*/
