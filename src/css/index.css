@@ -4,9 +4,12 @@
   TOPページのスタイル
 =======================*/
 /*トップページ 共通*/
+
+/*パララックス*/
 .heading-parallax {
   height: 240px;
   position: relative;
+  margin-bottom: 3.5em;
 }
 
 .heading-parallax::before {
