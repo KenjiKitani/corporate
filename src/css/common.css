@@ -1,53 +1,56 @@
 @charset "utf-8";
 
 /*
-  headerセッティング
+  headerセッティング（メニュー等）
 ------------------------*/
 .header {
   padding: 8px 0;
   background-color: #fff;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 100;
+  position: fixed; /* 位置の固定 */
+  top: 0; /* 上の位置0 */
+  left: 0; /* 左の位置0 */
+  width: 100%; /* 位置の固定 */
+  z-index: 100; /* 重ね位置。数値を100に設定。大きい数字が一番上。下にするものを100以下にする */
 }
 
+/* ヘッダーの大きさの設定 */
 .header-container {
   width: 90%;
   max-width: 1040px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  margin: auto; /* 左右の位置をセンター */
+  display: flex; /* ロゴとメニューを横並び */
+  justify-content: space-between; /* ロゴとメニューを均等配置 */
+  align-items: center; /* ロゴとメニューの上下位置をセンター*/
 }
 
 .menu {
   list-style: none;
-  display: flex;
+  display: flex; /* メニューを横並び */
 }
 
+/* メニューをクリックした際の調整 */
 .menu-item a {
-  display: inline-block;
-  padding: 0.5em 1em;
-  position: relative;
+  display: inline-block; /* paddingを効かせるためにinline-blockにする */
+  padding: 0.5em 1em; /* リンクのクリック位置をpaddingで広げる */
+  position: relative; /* ホバーの為の位置の基準 */
 }
 
+/* メニューをクリックした際のホバーをつける */
 .menu-item a::after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 2px;
-  background-color: #000;
-  position: absolute;
-  left: 0%;
-  bottom: -12px;
-  transition: 0.3s all ease-in-out;
+  content: ""; /* contentは::afterを使用する際には必ずつける */
+  display: block; /* block要素にする */
+  width: 0; /* 左から右に流れる線のスタートなので0にする */
+  height: 2px; /* 太さ2pxのラインをつける */
+  background-color: #000; /* ラインの色 */
+  position: absolute; /* positionの設定 */
+  left: 0%; /* 左端からスタート */
+  bottom: -12px; /* 12px下にラインをつける */
+  transition: 0.3s all ease-in-out; /* 0.3秒かけて表示 allは全てに対して ゆっくり始まってゆっくり終わる */
 }
 
 .menu-item a:hover::after {
-  width: 100%;
+  width: 100%; /* 位置の逆転 */
 }
 
 /*
@@ -69,81 +72,101 @@
   justify-content: space-between;
 }
 
+/* ビジネスセクション */
+
+/* リストの設定、横幅、装飾など */
 .media-list-item {
   list-style: none;
-  width: calc((100% - 2em - 2em) / 3);
+  width: calc((100% - 2em - 2em) / 3); /* 3つのボックスの大きさ、隙間計算 */
 }
 
+/* セクション内でのテキスト、画像の設定 */
 .media-list-text {
   display: flex;
   flex-direction: column-reverse; /* 位置の逆転 */
 }
 
+/* 画像の余白などの設定 */
 .media-list-image {
-  margin-bottom: 1em;
+  margin-bottom: 1em; /* 写真の下の余白 */
 }
 
+/* 画像の大きさ */
 .media-list-image img {
-  width: 100%;
+  width: 100%; /* base.cssでmax-widthを100%に設定している為、ここではwidthを100%にする */
 }
 
 /*共通クラス*/
+
+/* h3見出しの設定 */
 .heading-primary {
-  font-size: 1.75em;
-  padding: 0.571em 0;
-  border-top: 2px solid #2c2c2c;
-  border-bottom: 1px solid #ddd;
-  margin-top: 2em;
-  margin-bottom: 1.429em;
+  font-size: 1.75em; /* フォントサイズ */
+  padding: 0.571em 0; /* パディングサイズ */
+  border-top: 2px solid #2c2c2c; /* 上の線 */
+  border-bottom: 1px solid #ddd; /* 下の薄い線ズ */
+  margin-top: 2em; /* 上の余白 */
+  margin-bottom: 1.429em; /* 上の余白 */
 }
 
+/* 二色のアンダーラインの設定 */
 .heading-underline {
-  font-size: 1.5em;
-  padding: 0.167em 0;
-  border-bottom: 1px solid #ddd;
-  margin-bottom: 0.667em;
-  position: relative;
+  font-size: 1.5em; /* h4の文字の大きさ */
+  padding: 0.167em 0; /* h4の文字の上下の余白 */
+  border-bottom: 1px solid #ddd; /*太さ1pxのグレーの線 */
+  margin-bottom: 0.667em; /* 線の下の余白 */
+  position: relative; /* beforeの基準 */
 }
 
+/* 二色のアンダーラインの設定 */
 .heading-underline::before {
-  content: "";
-  display: inline-block;
-  width: 30%;
-  height: 1px;
-  background-color: #2c2c2c;
-  position: absolute;
-  left: 0;
-  bottom: -1px;
+  /* beforeは上に重ねる*/
+  content: ""; /* 疑似要素のはcontentが必要 */
+  display: inline-block; /* テキストにhightを使うのでinline-block */
+  width: 30%; /* 30%の長さ */
+  height: 1px; /* 太さ1px */
+  background-color: #2c2c2c; /* 黒い線 */
+  position: absolute; /* relativeを基準 */
+  left: 0; /* 左端に */
+  bottom: -1px; /* メディア、paddingの外に1pxのボーダーがあるので-1pxで調整 */
 }
 
+/*  */
 .list-arrow {
-  list-style: none;
+  list-style: none; /* listの装飾を消す */
 }
 
+/*  */
 .list-arrow li {
-  padding-left: 1.5em;
-  position: relative;
+  padding-left: 1.5em; /* liのテキストの左に余白 */
+  position: relative; /* beforeの基準 */
 }
 
+/* SVG画像を使用する */
 .list-arrow li::before {
-  content: "";
-  display: inline-block;
-  width: 16px;
-  height: 16px;
+  content: ""; /* 疑似要素のはcontentが必要 */
+  display: inline-block; /* テキストにhightを使うのでinline-block */
+  width: 16px; /* アイコンの大きさ */
+  height: 16px; /* アイコンの大きさ */
   background-image: url("/wp-content/themes/corporate/src/img/right-circle-arrow.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: contain;
-  position: absolute;
-  left: 0;
+  background-repeat: no-repeat; /* bgを設定したら必要。繰り返し設定 */
+  background-position: center center; /* bgを設定したら必要。センター合わせ */
+  background-size: contain; /* bgを設定したら必要。containは比率を変える事なく可能な限り大きくする*/
+  position: absolute; /* relativeを基準 */
+  left: 0; /* 左端に  */
   top: calc((1em * 1.5) / 2); /* 計算式（font-size×line-height）/2 */
-  transform: translateY(-50%);
+  transform: translateY(-50%); /* アイコンの半分だけ上にずらす */
 }
 
+/* 隣接セレクター */
 .list-arrow li + li {
-  margin-top: 0.25em; /* 隣接セレクター !2個目以降にかかる*/
+  margin-top: 0.25em; /* 隣接セレクター 2個目以降にかかる */
 }
 
+.main-body-text {
+  margin-bottom: 5em; /*  */
+}
+
+/* Pの設定 */
 .main-body-text p {
-  margin-bottom: 2em;
+  margin-bottom: 2em; /* Pの下余白の設定 */
 }

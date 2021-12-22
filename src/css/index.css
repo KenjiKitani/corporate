@@ -7,9 +7,9 @@
 
 /*パララックス*/
 .heading-parallax {
-  height: 240px;
-  position: relative;
-  margin-bottom: 3.5em;
+  height: 240px; /* 画像の高さ240px */
+  position: relative; /* 疑似要素の基準点 */
+  margin-bottom: 3.5em; /* パララックス画像の下のスペース設定 */
 }
 
 .heading-parallax::before {
@@ -90,5 +90,3 @@
   width: 100%;
   max-width: inherit; /* inheritは他のcssのmax-widthを打ち消す */
 }
-
-/* ビジネスセクション*/
