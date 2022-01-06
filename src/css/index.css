@@ -106,8 +106,8 @@
 .column-list-link {
   display: block;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
-  border-radius: 4px;
-  overflow: hidden;
+  border-radius: 4px; /* 角丸にする */
+  overflow: hidden; /* 角丸にするため必要なことがある（画像などはみ出した分は隠す）マスクをかけている感じ*/
 }
 
 .column-list-inner {
@@ -138,6 +138,7 @@
 
 .news-list-item {
   border-bottom: 1px solid #ddd;
+  padding: 0.25em 0;
 }
 
 .news-list-link {
@@ -160,7 +161,7 @@
 }
 
 .news-list-text {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  overflow: hidden; /* ・・・3点リーダー */
+  text-overflow: ellipsis; /* 3点リーダー */
+  white-space: nowrap; /* 3点リーダー */
 }

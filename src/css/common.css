@@ -58,7 +58,8 @@
 ------------------------*/
 
 .main {
-  padding-top: 64px;
+  padding-top: 4em;
+  padding-bottom: 5em;
 }
 
 .container {
@@ -162,6 +163,7 @@
   margin-top: 0.25em; /* 隣接セレクター 2個目以降にかかる */
 }
 
+/* コンテナ内の設定 */
 .main-body-text {
   margin-bottom: 5em; /*  */
 }
@@ -172,12 +174,12 @@
 }
 
 .category {
-  font-size: 0.875em; /*  */
-  border: 1px solid; /*  */
-  display: inline-block; /*  */
-  padding: 2px 4px; /*  */
-  border-radius: 2px; /*  */
-  margin-top: 4px; /*  */
+  font-size: 0.875em; /* フォントサイズ */
+  border: 1px solid; /* 線の設定 */
+  display: inline-block; /* 線を設定するためにinline-block */
+  padding: 2px 4px; /* ボタンサイズ */
+  border-radius: 2px; /* ボタンの角丸 */
+  margin-top: 4px; /* 上部の余白設定 */
 }
 
 /* ボタン */
@@ -202,4 +204,23 @@
 .button:hover {
   color: #000;
   background-color: #fff;
+}
+
+/* フッター */
+.footer {
+  background-color: #fafafa;
+}
+
+.footer-upper {
+  padding: 4em 0 3em;
+}
+
+.copyright {
+  text-align: center;
+  padding: 1em 0;
+  border-top: 2px solid #fff;
+}
+
+.footer-logo {
+  margin-bottom: 1em;
 }
