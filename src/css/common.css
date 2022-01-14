@@ -63,8 +63,8 @@
 }
 
 .container {
-  max-width: 1140px;
-  width: 90%;
+  max-width: 1140px; /* 最大横幅 */
+  width: 90%; /* 横幅90%（縮めた時） */
   margin: auto;
 }
 
